@@ -7,7 +7,7 @@ app.use(express.json());
 // Configuration CORS avec plusieurs options
 const corsOptions = {
   origin: (origin, callback) => {
-    const allowedOrigins = ['http://example.com', 'http://localhost:4000']; // Liste blanche des domaines autorisés
+    const allowedOrigins = ['*']; // Liste blanche des domaines autorisés
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
