@@ -24,7 +24,7 @@ jobs:
       # Étape 3 : Construire l'image Docker
       - name: Build Docker Image with tags
         run: |
-          docker build -t mohamed1780/api-user:latest .
+          docker build -t mohamed1780/api-user:aws .
           docker build -t mohamed1780/api-user:${{ github.sha }} .
 
       # Étape 4 : Pusher toutes les images Docker
