@@ -14,7 +14,7 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Méthodes HTTP autorisées
+  methods: ['GET', 'PUT'], // Méthodes HTTP autorisées
   allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes autorisés
   exposedHeaders: ['Content-Length', 'X-Custom-Header'], // En-têtes exposés aux clients
   credentials: true, // Permettre l'envoi de cookies et d'informations d'authentification
@@ -25,7 +25,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Version de l'API
-const API_VERSION = '/v2';
+const API_VERSION = '/v6';
 
 // Jeu de données
 let users = [
